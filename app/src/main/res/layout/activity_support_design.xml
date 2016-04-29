@@ -1,40 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/display_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="显示Fab"
-            android:textSize="18sp"
-            android:background="@drawable/shape_bg"
-            />
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/hide_fab"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="18sp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="隐藏Fab"
-            android:background="@drawable/shape_bg"
-            />
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/display_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="显示Fab"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/hide_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="隐藏Fab"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </android.support.v7.widget.RecyclerView>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -42,11 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:src="@drawable/search"
-        app:fabSize="normal"
-        app:useCompatPadding="true"
-        app:backgroundTint="@color/redE11644"
         android:layout_margin="@dimen/activity_vertical_margin"
-        />
+        android:src="@drawable/search"
+        app:backgroundTint="@color/redE11644"
+        app:fabSize="normal"
+        app:useCompatPadding="true" />
 
 </android.support.design.widget.CoordinatorLayout>
