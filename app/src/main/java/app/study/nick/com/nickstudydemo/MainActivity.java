@@ -16,6 +16,7 @@ import java.util.zip.Inflater;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnItemClick;
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
@@ -31,12 +32,11 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mContext = this;
         mList.setAdapter(new Adapter());
-        mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(position);
-            }
-        });
+    }
+
+    @OnItemClick(R.id.select_list)
+    void onItemClick(int position){
+        startActivity(position);
     }
 
     private void startActivity(int position){
@@ -74,9 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
     class ViewHolder{
-        public TextView mTextView;
+        @Bind(R.id.name)
+        TextView mTextView;
         ViewHolder(View item){
-            mTextView = (TextView) item.findViewById(R.id.name);
+           ButterKnife.bind(this,item);
         }
     }
 
