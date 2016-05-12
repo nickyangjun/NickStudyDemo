@@ -49,12 +49,11 @@ public class BaseActivity extends AppCompatActivity implements BackHandleInterfa
     }
 
     @Override
-    public void finishCurentFragment() {
-        FragmentManager manager = mBaseFragment.getFragmentManager();
+    public void finishCurentFragment(BaseFragment currentFragment) {
+        FragmentManager manager = currentFragment.getFragmentManager();
         FragmentTransaction ft = manager.beginTransaction();
-        ft.remove(mBaseFragment);
+        ft.remove(currentFragment);
         ft.commit();
-        mBaseFragment = null;
     }
 
 }

@@ -7,5 +7,5 @@ import app.study.nick.com.nickstudydemo.fragment.BaseFragment;
  */
 public interface BackHandleInterface {
     public abstract void setCurrentFragment(BaseFragment currentFragment);
-    public abstract void finishCurentFragment();
+    public abstract void finishCurentFragment(BaseFragment currentFragment);
 }

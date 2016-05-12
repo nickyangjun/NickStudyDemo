@@ -58,6 +58,6 @@ public abstract class BaseFragment extends Fragment  {
     }
 
     public void finishFragment(){
-        mBackHandledInterface.finishCurentFragment();
+        mBackHandledInterface.finishCurentFragment(this);
     }
 }
