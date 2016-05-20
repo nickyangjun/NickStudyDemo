@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:fitsSystemWindows="true">
+
+    <Button
+        android:id="@+id/transition_explode"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="Explode展开效果" />
+
+    <Button
+        android:id="@+id/transition_slide"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="Slide效果"/>
+    <Button
+        android:id="@+id/transition_fade"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="Fade效果"/>
+
+    <Button
+        android:id="@+id/transition_share"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="share element效果"/>
+
+</LinearLayout>

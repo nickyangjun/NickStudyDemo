@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import app.study.nick.com.nickstudydemo.fragment.SDAppBarLayoutFragment;
 import app.study.nick.com.nickstudydemo.fragment.SDCollapsingToolbarLayoutFragment;
+import app.study.nick.com.nickstudydemo.fragment.SDTextInputLayoutFragment;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,7 +28,7 @@ import butterknife.OnItemClick;
  * Created by yangjun1 on 2016/4/22.
  */
 public class AndroidSupportDesign extends BaseActivity {
-    String[] titles = {"Android Support Design  -- AppBarLayout","Android Support Design  -- CollapsingToolbarLayout"};
+    String[] titles = {"Android Support Design  -- AppBarLayout","Android Support Design  -- CollapsingToolbarLayout","Android Support Design  -- TextInputLayout"};
     @Bind(R.id.list_rv)
     RecyclerView mRecyclerView;
     @Bind(R.id.fragment_container)
@@ -55,6 +56,10 @@ public class AndroidSupportDesign extends BaseActivity {
             case 1:
                 f = SDCollapsingToolbarLayoutFragment.getInstance();
                 Tag = SDCollapsingToolbarLayoutFragment.TAG;
+                break;
+            case 2:
+                f = SDTextInputLayoutFragment.getInstance();
+                Tag = SDTextInputLayoutFragment.TAG;
                 break;
             default:
                 return;

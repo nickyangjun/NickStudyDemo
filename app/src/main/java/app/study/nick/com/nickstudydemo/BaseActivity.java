@@ -54,6 +54,7 @@ public class BaseActivity extends AppCompatActivity implements BackHandleInterfa
         FragmentTransaction ft = manager.beginTransaction();
         ft.remove(currentFragment);
         ft.commit();
+        mBaseFragment=null;
     }
 
 }
