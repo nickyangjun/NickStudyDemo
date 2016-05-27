@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+//使用aspectj插件
+apply plugin: 'com.uphyca.android-aspectj'
 
 android {
     compileSdkVersion 23
