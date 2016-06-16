@@ -20,8 +20,8 @@ import butterknife.OnItemClick;
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
-    String[] titles = {"Android Support Design","Android Elevation","Activity Transition"};
-    String[] action = {"study.AndroidSupportDesign","study.AndroidElevation","study.ActivityTransition"};
+    String[] titles = {"Android Support Design","Android Elevation","Activity Transition","Network Test"};
+    String[] action = {"study.AndroidSupportDesign","study.AndroidElevation","study.ActivityTransition","study.NetworkTestActivity"};
 
     @Bind(R.id.select_list)
     ListView mList;

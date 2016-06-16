@@ -12,13 +12,13 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list_rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent"/>
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"></FrameLayout>
+            android:visibility="gone"/>
 
     </android.support.design.widget.CoordinatorLayout>
 </RelativeLayout>
