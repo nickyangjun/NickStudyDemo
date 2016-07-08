@@ -2,10 +2,11 @@ apply plugin: 'com.android.application'
 //使用aspectj插件
 apply plugin: 'com.uphyca.android-aspectj'
 
+apply plugin: 'com.nick.assemble-apk'
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
     defaultConfig {
         applicationId "app.study.nick.com.nickstudydemo"
         minSdkVersion 15
@@ -13,11 +14,36 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        release {
+            storeFile file('sign_keystore.jks')
+            storePassword "android"
+            keyAlias "androidkey"
+            keyPassword "android"
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    productFlavors {
     }
 }
 
@@ -27,7 +53,25 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'com.android.support:palette-v7:23.3.0'
-    compile 'com.jakewharton:butterknife:7.0.1'  // library 里面不支持butterknife
-    debugCompile project(path: ':network', configuration: 'debug')  //配置其他模块的编译版本
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // library 里面不支持butterknife
+    debugCompile project(path: ':network', configuration: 'debug')
+    //配置其他模块的编译版本
     releaseCompile project(path: ':network', configuration: 'release')
+}
+
+class HelloPlugin implements Plugin<Project>{
+
+    @Override
+    void apply(Project project) {
+        project.task('hello') << {
+            println 'hello, world!'
+        }
+    }
+}
+
+apply plugin: HelloPlugin
+
+pluginArgs{
+    message = 'holle gradle plugin'
 }
