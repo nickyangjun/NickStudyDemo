@@ -1,4 +1,4 @@
-package app.study.nick.com.nickstudydemo;
+package app.study.nick.com.demo;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,6 +1,6 @@
-package app.study.nick.com.nickstudydemo;
+package app.study.nick.com.demo;
 
-import app.study.nick.com.nickstudydemo.fragment.BaseFragment;
+import app.study.nick.com.demo.fragment.BaseFragment;
 
 /**
  * Created by yangjun1 on 2016/5/10.

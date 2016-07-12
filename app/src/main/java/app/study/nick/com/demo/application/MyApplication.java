@@ -1,4 +1,4 @@
-package app.study.nick.com.nickstudydemo.application;
+package app.study.nick.com.demo.application;
 
 import android.app.Application;
 

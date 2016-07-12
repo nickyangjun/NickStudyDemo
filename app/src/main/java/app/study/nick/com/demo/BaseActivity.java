@@ -1,10 +1,10 @@
-package app.study.nick.com.nickstudydemo;
+package app.study.nick.com.demo;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import app.study.nick.com.nickstudydemo.fragment.BaseFragment;
+import app.study.nick.com.demo.fragment.BaseFragment;
 
 /**
  * Created by yangjun1 on 2016/5/10.

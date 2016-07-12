@@ -1,4 +1,4 @@
-package app.study.nick.com.nickstudydemo.fragment;
+package app.study.nick.com.demo.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import app.study.nick.com.nickstudydemo.R;
+import app.study.nick.com.demo.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 

@@ -1,4 +1,4 @@
-package app.study.nick.com.nickstudydemo.fragment;
+package app.study.nick.com.demo.fragment;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,10 +13,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.graphics.Palette;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +21,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.study.nick.com.nickstudydemo.R;
+import app.study.nick.com.demo.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

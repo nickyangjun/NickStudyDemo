@@ -1,13 +1,10 @@
-package app.study.nick.com.nickstudydemo;
+package app.study.nick.com.demo;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.ViewCompat;
-import android.transition.ChangeBounds;
-import android.transition.ChangeClipBounds;
 import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;

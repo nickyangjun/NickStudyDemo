@@ -1,14 +1,10 @@
-package app.study.nick.com.nickstudydemo;
+package app.study.nick.com.demo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -16,13 +12,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import app.study.nick.com.nickstudydemo.fragment.SDAppBarLayoutFragment;
-import app.study.nick.com.nickstudydemo.fragment.SDCollapsingToolbarLayoutFragment;
-import app.study.nick.com.nickstudydemo.fragment.SDTextInputLayoutFragment;
+import app.study.nick.com.demo.fragment.SDAppBarLayoutFragment;
+import app.study.nick.com.demo.fragment.SDTextInputLayoutFragment;
+import app.study.nick.com.demo.fragment.SDCollapsingToolbarLayoutFragment;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.OnItemClick;
 
 /**
  * Created by yangjun1 on 2016/4/22.

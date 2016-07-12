@@ -1,4 +1,4 @@
-package app.study.nick.com.nickstudydemo.aspectj;
+package app.study.nick.com.demo.aspectj;
 
 import android.util.Log;
 
@@ -14,7 +14,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 @Aspect
 public class TestAspect {
 
-    public final String POINTCUT_START_ACTIVITY = "execution(* app.study.nick.com.nickstudydemo.MainActivity.startActivity(..))";   //
+    public final String POINTCUT_START_ACTIVITY = "execution(* MainActivity.startActivity(..))";   //
     public final String METHOD_POINTCUT_START_ACTIVITY = "startActivity";
 
     public final String POINTCUT_BASE_ADAPTER_GET_COUNT = "execution(* android.widget.BaseAdapter.getCount(..))";   //

@@ -1,10 +1,10 @@
-package app.study.nick.com.nickstudydemo.fragment;
+package app.study.nick.com.demo.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
-import app.study.nick.com.nickstudydemo.BackHandleInterface;
+import app.study.nick.com.demo.BackHandleInterface;
 
 
 /**

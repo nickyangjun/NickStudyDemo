@@ -1,8 +1,6 @@
-package app.study.nick.com.nickstudydemo;
+package app.study.nick.com.demo;
 
-import android.animation.StateListAnimator;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
