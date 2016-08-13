@@ -54,10 +54,13 @@ dependencies {
     compile 'com.android.support:design:23.3.0'
     compile 'com.android.support:palette-v7:23.3.0'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+
     // library 里面不支持butterknife
     debugCompile project(path: ':network', configuration: 'debug')
     //配置其他模块的编译版本
     releaseCompile project(path: ':network', configuration: 'release')
+
 }
 
 class HelloPlugin implements Plugin<Project>{

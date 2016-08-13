@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:labelview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_circle_message_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green48CD96">
+
+    <app.study.nick.com.demo.view.LabelImageView
+        android:id="@+id/labelImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        labelview:imageSrc="@drawable/girls"
+        labelview:imageScaleType="CENTER_CROP"
+        android:visibility="visible"
+        />
+
+    <!--<app.study.nick.com.demo.view.LabelView-->
+        <!--android:id="@+id/label4"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:padding="4dp"-->
+        <!--labelview:labelText1="商品描述品描述品描述品描述品描述品描述区域限制15个字"-->
+        <!--labelview:labelText2="6666人民币bbb"-->
+        <!--labelview:labelTextColor="@color/white"-->
+        <!--labelview:labelTextSize="12sp"-->
+        <!--labelview:labelLineColor="@color/white"-->
+        <!--labelview:labelLineSize="2dp"-->
+        <!--labelview:labelHeaderColor="@color/white"-->
+        <!--labelview:labelHeaderRadius="5dp"-->
+        <!--labelview:labelDirect="left" />-->
+
+
+</RelativeLayout>

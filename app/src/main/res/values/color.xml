@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015年09月29日检查所有color.xml，所有module的color都统一用这份 -->
+<resources tools:ignore="UnusedResources" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+
+    <!-- 各种透明度的白色 -->
+    <color name="white">#ffffff</color>
+    <color name="white90">#e6ffffff</color>
+    <color name="white80">#ccffffff</color>
+    <color name="white70">#b3ffffff</color>
+    <color name="white60">#99ffffff</color>
+    <color name="white50">#80ffffff</color>
+    <color name="white40">#66ffffff</color>
+    <color name="white30">#4dffffff</color>
+    <color name="white20">#33ffffff</color>
+    <color name="white10">#1affffff</color>
+
+    <!-- 各种透明度的黑色 -->
+    <color name="black">#000000</color>
+    <color name="black90">#e6000000</color>
+    <color name="black80">#cc000000</color>
+    <color name="black70">#b3000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black40">#66000000</color>
+    <color name="black30">#4d000000</color>
+    <color name="black20">#33000000</color>
+    <color name="black10">#1a000000</color>
+
+    <!-- 以下是京致衣橱视觉规范，整个APP中只能出现下列颜色 -->
+
+    <!-- 1. 基本色彩 -->
+    <color name="redE11644">#e11644</color>
+    <color name="yellowFFAF25">#ffaf25</color>
+    <color name="pinkFC8080">#fc8080</color>
+    <color name="blue4BA0E9">#4ba0e9</color>
+    <color name="purple8B8CD5">#8b8cd5</color>
+    <color name="hotpinkFF70a8">#ff70a8</color>
+    <color name="orangeFF892F">#ff892f</color>
+    <color name="green48CD96">#48cd96</color>
+
+    <!-- 2.基本色彩pressed、disable状态 -->
+    <color name="redPressedB60E34">#b60e34</color>
+    <color name="redDisable666666">#666666</color>
+    <color name="orangePressedFFAF25">#ffaf25</color>
+    <color name="orangeDisable999999">#999999</color>
+    <color name="whitePressedF0F0F0">#f0f0f0</color>
+    <color name="whiteDisableFFFFFF">#ffffff</color>
+
+    <!-- 3.背景只能用以下3种颜色 -->
+    <color name="grayEEEEEE">#eeeeee</color>  <!-- activity背景 -->
+    <color name="grayF2F2F2">#f2f2f2</color>  <!-- 次级背景 -->
+    <color name="grayF5F5F5">#f5f5f5</color>  <!-- 次级背景 -->
+    <color name="grayFAFAFA">#fafafa</color>  <!-- 三级背景，用在输入框下面 -->
+    <color name="grayF4F4F6">#f4f4f6</color>
+
+    <!-- 4.分割线 -->
+    <color name="dividerCCCCCC">#cccccc</color>  <!-- 跟背景接触的分割线 -->
+    <color name="dividerDDDDDD">#dddddd</color>  <!-- 内部元素之间的分割线 -->
+
+    <!-- 5.文字颜色 -->
+    <color name="fontRedE11644">#e11644</color>
+    <color name="fontBlue3D82D8">#3d82d8</color>
+    <color name="fontTitle333333">#333333</color>
+    <color name="fontBody666666">#666666</color>
+    <color name="fontDesc999999">#999999</color>
+    <color name="fontHintCCCCCC">#cccccc</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="grayccc">#ffcccccc</color>
+
+</resources>
+

@@ -11,17 +11,23 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.zip.Inflater;
 
+import app.study.nick.com.demo.events.EventNum;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
-    String[] titles = {"Android Support Design","Android Elevation","Activity Transition","Network Test"};
-    String[] action = {"study.AndroidSupportDesign","study.AndroidElevation","study.ActivityTransition","study.NetworkTestActivity"};
+    String[] titles = {"Android Support Design","Android Elevation","Activity Transition","Network Test","EventBus Test","Label View"};
+    String[] action = {"study.AndroidSupportDesign","study.AndroidElevation","study.ActivityTransition","study.NetworkTestActivity","study.EventBusTestActivity","study.LabelActivity"};
 
     @Bind(R.id.select_list)
     ListView mList;
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        EventBus.getDefault().register(this);
         mContext = this;
         mList.setAdapter(new Adapter());
     }
@@ -39,7 +46,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(position);
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void getEventNum(EventNum eventNum){
+        Toast.makeText(this,"I am MainActivity receive "+eventNum.getNum(),Toast.LENGTH_LONG).show();
+    }
+
     private void startActivity(int position){
+        if(position == 4){ //eventBus 传值
+            EventBus.getDefault().postSticky(new EventNum(10));
+        }
         Intent i = new Intent(action[position]);
         startActivity(i);
     }
@@ -85,5 +100,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
+        EventBus.getDefault().unregister(this);
     }
 }

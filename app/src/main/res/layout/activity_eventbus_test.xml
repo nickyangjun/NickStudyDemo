@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grayccc"
+    android:fitsSystemWindows="true">
+
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@color/white"
+        android:text="0"
+        android:gravity="center"
+        android:textColor="@color/redE11644"
+        android:textSize="40sp"/>
+
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/num"
+        android:background="@color/white"
+        android:layout_marginTop="200dp"
+        android:text="start running thread"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/manual_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/start_btn"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:text="manual main thread"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+
+
+</RelativeLayout>

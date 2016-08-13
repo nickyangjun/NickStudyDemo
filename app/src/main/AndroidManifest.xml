@@ -36,7 +36,19 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="app.study.nick.com.demo.EventBusTestActivity">
+            <intent-filter>
+                <action android:name="study.EventBusTestActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name="app.study.nick.com.demo.SecondActivity"/>
+        <activity android:name=".LabelActivity">
+            <intent-filter>
+                <action android:name="study.LabelActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
