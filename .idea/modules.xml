@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/NickStudyDemo.iml" filepath="$PROJECT_DIR$/NickStudyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nickStudyDemo.iml" filepath="$PROJECT_DIR$/nickStudyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/gradle-test.iml" filepath="$PROJECT_DIR$/buildSrc/gradle-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
     </modules>
   </component>
 </project>

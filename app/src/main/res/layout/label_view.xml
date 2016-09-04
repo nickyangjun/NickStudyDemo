@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <app.study.nick.com.demo.view.LabelView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:labelview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        labelview:labelText1="比基尼"
+        labelview:labelText2="对面的女孩看过来"
+        labelview:labelTextColor="@color/redE11644"
+        labelview:labelTextSize="14sp"
+        labelview:labelLineColor="@color/redE11644"
+        labelview:labelLineSize="2dp"
+        labelview:labelHeaderColor="@color/redE11644"
+        labelview:labelHeaderShaderStartColor="@color/white80"
+        labelview:labelHeaderShaderEndColor="@color/white50"
+        labelview:labelHeaderRadius="4dp"
+        labelview:labelDirect="left"
+        labelview:labelPositionX="0.2"
+        labelview:labelPositionY="0.5"/>
+
+
+

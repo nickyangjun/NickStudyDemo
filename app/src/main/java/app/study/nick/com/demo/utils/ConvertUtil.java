@@ -69,6 +69,10 @@ public class ConvertUtil {
         return l + "";
     }
 
+    public static String toString(float l) {
+        return l + "";
+    }
+
     /**
      * 将String装换为float
      */

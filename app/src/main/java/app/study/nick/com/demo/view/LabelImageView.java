@@ -1,9 +1,12 @@
 package app.study.nick.com.demo.view;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -17,6 +20,7 @@ import app.study.nick.com.demo.utils.ConvertUtil;
  * Created by yangjun1 on 2016/8/13.
  */
 public class LabelImageView extends ViewGroup {
+    private static final String TAG = LabelImageView.class.getSimpleName();
     private Context mContext;
     private ImageView mImageView;
 
@@ -67,6 +71,7 @@ public class LabelImageView extends ViewGroup {
             }
         }
         a.recycle();
+        LayoutInflater.from(context).inflate(R.layout.label_view,this,true);
     }
 
     private void initImageView(){
@@ -76,6 +81,7 @@ public class LabelImageView extends ViewGroup {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        Log.e(TAG,"-----------  onMeasure -------------");
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
@@ -90,7 +96,7 @@ public class LabelImageView extends ViewGroup {
                 getChildAt(i).measure(widthMeasureSpec,heightMeasureSpec);
             }else {
                 //测量LabelView的宽高
-                getChildAt(i).measure(MeasureSpec.AT_MOST,MeasureSpec.AT_MOST);
+                getChildAt(i).measure(MeasureSpec.UNSPECIFIED,MeasureSpec.UNSPECIFIED);
             }
         }
 
@@ -111,15 +117,34 @@ public class LabelImageView extends ViewGroup {
     }
 
     @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        Log.e(TAG,"-----------  onFinishInflate -------------");
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Log.e(TAG,"-----------  onAttachedToWindow -------------");
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        Log.e(TAG,"-----------  onDetachedFromWindow -------------");
+    }
+
+    @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        Log.e(TAG,"-----------  onLayout -------------");
         if(changed){
             int childCount = getChildCount();
             for(int i=0;i<childCount;i++){
                 View v = getChildAt(i);
-                if(v instanceof ImageView){
+                if(v instanceof ImageView){ //布局ImageView
                     v.layout(l+getPaddingLeft(),t+getPaddingTop(),r-getPaddingRight(),b-getPaddingBottom());
-                }else if(v instanceof LabelView){
-                    LabelView.LabelData labelData = ((LabelView)v).getLabelData();
+                }else if(v instanceof LabelView){//布局LabelView
+                    LabelData labelData = ((LabelView)v).getLabelData();
                     float pos[] = labelData.getPosition();
                     int cl = (int) (getWidth()*pos[0]);
                     int ct = (int) (getHeight()*pos[1]);
@@ -132,16 +157,16 @@ public class LabelImageView extends ViewGroup {
     }
 
 
-    public void addLabel(LabelView.LabelData labelData){
+    public void addLabel(LabelData labelData){
         LabelView labelView = new LabelView(mContext);
         labelView.setLabelData(labelData);
         addView(labelView);
-        requestLayout();
     }
 
-    public void addLabel(List<LabelView.LabelData> labelDataList){
-
+    public void addLabel(List<LabelData> labelDataList){
+        for(LabelData m : labelDataList){
+            addLabel(m);
+        }
     }
-
 
 }

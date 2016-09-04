@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         labelview:imageSrc="@drawable/girls"
-        labelview:imageScaleType="CENTER_CROP"
+        labelview:imageScaleType="FIT_CENTER"
         android:visibility="visible"
         />
 
@@ -32,6 +32,24 @@
         <!--labelview:labelHeaderColor="@color/white"-->
         <!--labelview:labelHeaderRadius="5dp"-->
         <!--labelview:labelDirect="left" />-->
+
+    <Button
+        android:id="@+id/change_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="100dp"
+        android:text="changeSize"/>
+    <Button
+        android:id="@+id/change_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        android:text="changePosition"/>
+
 
 
 </RelativeLayout>

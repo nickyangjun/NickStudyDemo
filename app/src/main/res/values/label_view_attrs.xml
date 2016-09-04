@@ -8,11 +8,15 @@
         <attr name="labelLineColor" format="color"/>
         <attr name="labelLineSize" format="dimension"/>
         <attr name="labelHeaderColor" format="color"/>
+        <attr name="labelHeaderShaderStartColor" format="color"/>
+        <attr name="labelHeaderShaderEndColor" format="color"/>
         <attr name="labelHeaderRadius" format="dimension"/>
         <attr name="labelDirect" >
             <enum name="right" value="0"/>
             <enum name="left" value="1"/>
         </attr>
+        <attr name="labelPositionX" format="float"/>
+        <attr name="labelPositionY" format="float"/>
     </declare-styleable>
 
     <declare-styleable name="LabelImageView">
